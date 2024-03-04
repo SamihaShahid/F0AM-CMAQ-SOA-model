@@ -11,4 +11,3 @@ This repository contains the thermodynamic equillibrium SOA model written in MAT
  * [Simulation_files](Simulation_files): Contains simulation files.
 ## Contact
 Samiha Binte Shahid (sbint003@ucr.edu)
-# F0AM-CMAQ-SOA-model
