@@ -8,6 +8,6 @@ This repository contains the thermodynamic equillibrium SOA model written in MAT
 ## Organization of the repository
 
  * [SOA_model](SOA_model): Contains the SOA model MATLAB functions.
- * [Simulation_files](Simulation_files): Contains simulation files.
+ 
 ## Contact
 Samiha Binte Shahid (sbint003@ucr.edu)
