@@ -1,5 +1,7 @@
 function [og_conc,aer_conc,dcaer_ll] = orgaer(idx,initinfo,sep)
+    %% Samiha Binte Shahid; email: sbint003@ur.edu
     %% Model unit ppb
+    %%
     if sep==1
         try
             allcols = initinfo.oaspc.gas_name;

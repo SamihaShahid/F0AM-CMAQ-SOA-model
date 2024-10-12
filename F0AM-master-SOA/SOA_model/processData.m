@@ -1,14 +1,16 @@
 function [oaspc, mwdf, alist, dgas1, dgas2] = processData(data)
+    %% Samiha Binte Shahid; email- sbint003@ucr.edu
+    % Input: data = output from gas-phase solver
+    % Output: Process parameter tables and extracts necessary variables
     %% Reading parameter tables%%
     warning('off', 'MATLAB:table:ModifiedAndSavedVarnames');
-    %cdir = '/Users/samiha/Desktop/desktop_v1/SOA model/';
     % Tables
     PM_list = {'ALIM1', 'ALIM2', 'ALIM3','AAVB1','AAVB2','AAVB3','AAVB4', ...
-        'AMT1','AMT2','AMT3','AMT4','AMT5','AMT6','AMT7','AISO1','AISO2','ASQT'};
+        'AMT1','AMT2','AMT3','AMT4','AMT5','AMT6','AMT7','AISO1','AISO2','ASQT'}; % aerosol species list
     
 %     PM_list = {'ALIM1', 'ALIM2', 'ALIM3'};
     
-    oaspc = readtable('oaspc_verify_sim.xlsx');
+    oaspc = readtable('vbs_parameters.xlsx'); 
     oaspc = oaspc(ismember(oaspc.name, PM_list), :);
 
     %oaspc = oaspc(:, {'name', 'gas_name', 'ctr_name'});
@@ -26,13 +28,13 @@ function [oaspc, mwdf, alist, dgas1, dgas2] = processData(data)
     %disp(dgas1);
     %disp(dgas2);
     
-    ae_spc = readtable('AE_SPECIES_VERIFY_SIM.xlsx');
+    ae_spc = readtable('aerosol_species_mw.xlsx');
     ae_spc = ae_spc(ismember(ae_spc.SPECIES, PM_list), :);
     
-    gc_spc = readtable('GC_SPECIES_VERIFY_SIM.xlsx');
-    nr_spc = readtable('NR_SPECIES_VERIFY_SIM.xlsx');
+    gc_spc = readtable('gas_phase_product_mw.xlsx');
+    nr_spc = readtable('gas_phase_product_mw_2.xlsx');
     
-    aerolist = readtable('AEROLIST_DATA_VERIFY_SIM.xlsx');
+    aerolist = readtable('aerosol_species_info.xlsx');
     alist = aerolist(ismember(aerolist.Name, oaspc.name), :);
     alist = alist(alist.Tracer == 0 & alist.OM, :);
     

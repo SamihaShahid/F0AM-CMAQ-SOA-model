@@ -1,34 +1,8 @@
 function [J] = integrate_J_saprc(PHFname,LFin)
-% function J = IntegrateJ(Cross,QYield,LFlux,T,P,wl_bounds,plotem)
-% Explicitly calculates a photolysis frequency by integrating the product of
-% cross section, quantum yield and actinic flux over wavelength.
-% Based on an ancient file from JD Crounse and F Paulot.
+% Created by Samiha Binte Shahid
+% PHF files contain absorpotion cross section and quantum yield of each
+% photolyis rate.
 %
-% INPUTS
-% CSin: absorption cross-section (cm^2) and corresponding wavelength (nm).
-% QYin: quantum yield (unitless) and corresponding wavelength (nm). 
-% LFin: light flux (quanta/cm^2/s/nm) and corresponding wavelength (nm).
-% T: temperature (in K). Can be scalar or 1-D array.
-% P: pressure (in mbar). Same size as T.
-% wl_bounds: an optional 2-element vector of min and max cutoff wavelengths.
-% plotem: optional flag to plot CS, QY, LF and their product. 0 or 1.
-%
-% For each of the first three inputs, there are several options for input format.
-% (1) string: name of text file where 1st column is wavelength and 2nd column is CS/QY/PF.
-% (2) array: 2-column numeric array of wavelength and CS/QY/PF.
-% (3) function: a handle for a function with CS/QY/PF as 1st output and wavelength as 2nd.
-%               Function must have inputs of T and P (in that order) AND
-%               be vectorized such that it returns a matrix with one column for each T input.
-% (4) scalar: assumed constant at all wavelengths (QUANTUM YIELD ONLY)
-%
-% OUTPUTS
-% J: photolysis frequency, /s
-% wl_out: wavelength grid for integration, nm
-% QY_out: gridded quantum yield
-% CS_out: gridded cross section, cm^2
-% LF_out: gridded light flux, quanta/cm^2/s/nm
-%
-% 20231010 WGM      Creation.
 
 %% LIGHT FLUX
 lf= readmatrix (LFin);

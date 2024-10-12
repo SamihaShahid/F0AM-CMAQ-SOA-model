@@ -46,6 +46,7 @@ InitConc = {...
     'HONO'      0.05                   0; %OH source option #1
     'wall_HONO' 0.01650                1;
     'wall_ALD'  0.01                   1;
+    'O2'        2.28e8                 1; %5.62e18 molecules/cm3 = 2.28e8 ppb 
 %   'CH3ONO'    0.8                    0;... %OH source option #2
     };
 
@@ -61,11 +62,12 @@ the specific set of initial species included above (isoprene and inorganics).
 %}
 
 ChemFiles = {...
-    'SAPRC18_k(Met)';
-    'SAPRC18_ICTUSE_Jvalues(Met)'; %Jmethod flag of 1 specifies using "BottomUp" J-value method.
-    'SAPRC18_AllRxns_test';
-    'Wall_Rxns';
-    'aerosol_precursor_rxns';
+    'SAPRC18P_k(Met)';
+    'SAPRC18P_ICTUSE_Jvalues(Met)'; %Jmethod flag of 1 specifies using "BottomUp" J-value method.
+    'SAPRC18P_AllRxns_Remove_PHEN';
+    'SAPRC18P_PHEN';
+    'SAPRC18P_WallRxns_EPA9A';
+    'TOLRO2_RXNS_parameter_adjusted';
     };
 
 %% DILUTION CONCENTRATIONS

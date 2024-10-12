@@ -53,16 +53,16 @@ Gstr{i,1} = 'XYLRO2'; Gstr{i,2} = 'HO2';
 fXYLRO2(i)=fXYLRO2(i)-1; fHO2(i)=fHO2(i)-1; fHO2(i)=fHO2(i)+1; fSVAVB1(i)=fSVAVB1(i)+0.193;
 
 i=i+1;
-Rnames{i} = 'TOLRO2 + NO = NO + 0.016*SVAVB2 + 0.051*SVAVB3 + 0.047*SVAVB4';
+Rnames{i} = 'TOLRO2 + NO = NO + 0.02976*SVAVB2 + 0.0279*SVAVB3 + 0.0874*SVAVB4';
 k(:,i) = 2.55e-12.*exp(379.932./T);
 Gstr{i,1} = 'TOLRO2'; Gstr{i,2} = 'NO';
-fTOLRO2(i)=fTOLRO2(i)-1; fNO(i)=fNO(i)-1; fNO(i)=fNO(i)+1; fSVAVB2(i)=fSVAVB2(i)+0.016; fSVAVB3(i)=fSVAVB3(i)+0.051; fSVAVB3(i)=fSVAVB3(i)+0.047;
+fTOLRO2(i)=fTOLRO2(i)-1; fNO(i)=fNO(i)-1; fNO(i)=fNO(i)+1; fSVAVB2(i)=fSVAVB2(i)+0.02976; fSVAVB3(i)=fSVAVB3(i)+0.0279; fSVAVB3(i)=fSVAVB3(i)+0.0874;
 
 i=i+1;
-Rnames{i} = 'TOLRO2 + HO2 = HO2 + 0.14*SVAVB1';
+Rnames{i} = 'TOLRO2 + HO2 = HO2 + 0.2604*SVAVB1';
 k(:,i) = 1.49e-11;
 Gstr{i,1} = 'TOLRO2'; Gstr{i,2} = 'NO';
-fTOLRO2(i)=fTOLRO2(i)-1; fHO2(i)=fHO2(i)-1; fHO2(i)=fHO2(i)+1; fSVAVB1(i)=fSVAVB1(i)+0.16;
+fTOLRO2(i)=fTOLRO2(i)-1; fHO2(i)=fHO2(i)-1; fHO2(i)=fHO2(i)+1; fSVAVB1(i)=fSVAVB1(i)+0.2604;
 
 i=i+1;
 Rnames{i} = 'PAHRO2 + NO = NO + 0.028*SVAVB2 + 0.225*SVAVB3+ 0.191*SVAVB4';
@@ -76,4 +76,31 @@ k(:,i) = 1.49e-11;
 Gstr{i,1} = 'PAHRO2'; Gstr{i,2} = 'HO2';
 fPAHRO2(i)=fPAHRO2(i)-1; fHO2(i)=fHO2(i)-1; fHO2(i)=fHO2(i)+1; fSVAVB1(i)=fSVAVB1(i)+0.473;
 
+%% TERP: LIM and CAMPH
+
+i=i+1;
+Rnames{i} = 'CAMPHRXN + NO = NO + 0.2657*SVAVB1 + 0.0008*SVAVB2 + 0.0357*SVAVB3 + 0.4222*SVAVB4';
+k(:,i) = 2.55e-12.*exp(379.932./T);
+Gstr{i,1} = 'CAMPHRXN'; Gstr{i,2} = 'NO';
+fCAMPHRXN(i)=fCAMPHRXN(i)-1; fNO(i)=fNO(i)-1; fNO(i)=fNO(i)+1; fSVAVB1(i)=fSVAVB1(i)+0.2657; fSVAVB2(i)=fSVAVB2(i)+0.0008; fSVAVB3(i)=fSVAVB3(i)+0.0357; fSVAVB4(i)=fSVAVB4(i)+0.4222;
+
+i=i+1;
+Rnames{i} = 'CAMPHRXN + HO2 = HO2 + 0.0001*SVAVB1 + 0.01528*SVAVB2 + 0.3069*SVAVB3 + 0.0001*SVAVB4';
+k(:,i) = 1.49e-11;
+Gstr{i,1} = 'CAMPHRXN'; Gstr{i,2} = 'HO2'; fHO2(i)=fHO2(i)+1; fSVAVB1(i)=fSVAVB1(i)+0.0001; fSVAVB2(i)=fSVAVB2(i)+0.01528; fSVAVB3(i)=fSVAVB3(i)+0.3069; fSVAVB4(i)=fSVAVB4(i)+0.0001;
+
+i=i+1;
+Rnames{i} = 'LIMRXN + NO = NO + 0.474*SVAVB2 + 0.117*SVAVB3 + 1.419*SVAVB4 '
+k(:,i) = 2.55e-12.*exp(379.932./T);
+Gstr{i,1} = 'LIMRXN'; Gstr{i,2} = 'NO';
+fLIMRXN(i)=fLIMRXN(i)-1; fNO(i)=fNO(i)-1; fNO(i)=fNO(i)+1; fSVAVB2(i)=fSVAVB2(i)+0.474; fSVAVB3(i)=fSVAVB3(i)+0.117; fSVAVB4(i)=fSVAVB4(i)+1.419;
+
+i=i+1;
+Rnames{i} = 'LIMRXN + HO2 = HO2 + 0.366*SVAVB2 + 0.321*SVAVB3 + 0.817*SVAVB4 '
+k(:,i) = 1.49e-11;
+Gstr{i,1} = 'LIMRXN'; Gstr{i,2} = 'HO2';
+fLIMRXN(i)=fLIMRXN(i)-1; fHO2(i)=fHO2(i)-1; fHO2(i)=fHO2(i)+1; fSVAVB2(i)=fSVAVB2(i)+0.366; fSVAVB3(i)=fSVAVB3(i)+0.321; fSVAVB4(i)=fSVAVB4(i)+0.817;
+
+
+%Rnames{i} = "TRPRXN + OH = OH + 0.04*SVAVB1 + 0.032*SVAVB2 + 0.032*SVAVB3 + 0.10*SVAVB4 + 0.143*SVAVB5 + 0.285*SVAVB6 + 0.160*SVAVB7"
 

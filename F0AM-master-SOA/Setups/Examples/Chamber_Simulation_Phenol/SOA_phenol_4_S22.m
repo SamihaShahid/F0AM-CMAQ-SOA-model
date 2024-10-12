@@ -130,6 +130,6 @@ S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
 % data = cell2table(data);
 % writetable(data, '/Users/samiha/Desktop/oxy_aro_chem/Chamber_Simulations/Phenol4_SOA_TOLRO2_adj_S22/iG.xlsx');
 
-data = num2cell(S.dcaer);
-data = cell2table(data);
-writetable(data, '/Users/samiha/Desktop/oxy_aro_chem/Chamber_Simulations/Phenol4_SOA_TOLRO2_adj_S22/soa.xlsx');
+% data = num2cell(S.dcaer);
+% data = cell2table(data);
+% writetable(data, '/Users/samiha/Desktop/oxy_aro_chem/Chamber_Simulations/Phenol4_SOA_TOLRO2_adj_S22/soa.xlsx');

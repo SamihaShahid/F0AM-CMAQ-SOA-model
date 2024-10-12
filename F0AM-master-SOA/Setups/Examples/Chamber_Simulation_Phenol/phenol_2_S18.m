@@ -25,7 +25,7 @@ Met = {...
     'T'         298                        ; %Temperature, K
     'RH'        1                         ; %Relative Humidity, percent
     'LFlux'     'saprc_light_flux.txt'     ; %Text file for radiation spectrum
-    'jcorr'       0.401/60                   ; %Experimental JNO2 0.5 min-1 converted to s-1 
+    'jcorr'     0.401/60                   ; %Experimental JNO2 0.5 min-1 converted to s-1 
     };
 
 %% CHEMICAL CONCENTRATIONS

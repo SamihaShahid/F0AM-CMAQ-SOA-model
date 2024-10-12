@@ -168,10 +168,10 @@ Gstr{i,1} = 'SVPHE_P1'; Gstr{i,2} = 'SumRCO3';
 fSVPHE_P1(i)=fSVPHE_P1(i)-1; fSumRCO3(i)=fSumRCO3(i)-1; fSumRCO3(i)=fSumRCO3(i)+1; fHO2(i)=fHO2(i)+.8; fAFG4A(i)=fAFG4A(i)+.4; fMGLY(i)=fMGLY(i)+.4; fBUDAL(i)=fBUDAL(i)+.4; fBACL(i)=fBACL(i)+.4; fOLEP(i)=fOLEP(i)+.2; fXC(i)=fXC(i)-2;
 
 i=i+1;
-Rnames{i} = 'CRES + OH = .631*BZO + .215*CRES_P1 + .154*HO2 + .053*OLEA1 + .036*LVKS + .026*OLEP + .021*XYNL + .018*OLEA2 + .495*XC + .215*SumRO2';
+Rnames{i} = 'CRES + OH = .631*BZO + .215*CRES_P1 + .154*HO2 + .053*OLEA1 + .036*LVKS + .026*OLEP + .021*XYNL + .018*OLEA2 + .495*XC + .215*SumRO2 + TOLRO2';
 k(:,i) = 1.60e-12.*(T./300).^0.00.*exp(998.893./T);
 Gstr{i,1} = 'CRES'; Gstr{i,2} = 'OH';
-fCRES(i)=fCRES(i)-1; fOH(i)=fOH(i)-1; fBZO(i)=fBZO(i)+.631; fCRES_P1(i)=fCRES_P1(i)+.215; fHO2(i)=fHO2(i)+.154; fOLEA1(i)=fOLEA1(i)+.053; fLVKS(i)=fLVKS(i)+.036; fOLEP(i)=fOLEP(i)+.026; fXYNL(i)=fXYNL(i)+.021; fOLEA2(i)=fOLEA2(i)+.018; fXC(i)=fXC(i)+.495; fSumRO2(i)=fSumRO2(i)+.215;
+fCRES(i)=fCRES(i)-1; fOH(i)=fOH(i)-1; fBZO(i)=fBZO(i)+.631; fCRES_P1(i)=fCRES_P1(i)+.215; fHO2(i)=fHO2(i)+.154; fOLEA1(i)=fOLEA1(i)+.053; fLVKS(i)=fLVKS(i)+.036; fOLEP(i)=fOLEP(i)+.026; fXYNL(i)=fXYNL(i)+.021; fOLEA2(i)=fOLEA2(i)+.018; fXC(i)=fXC(i)+.495; fSumRO2(i)=fSumRO2(i)+.215; fTOLRO2(i)=fTOLRO2(i)+1;
 
 i=i+1;
 Rnames{i} = 'CRES + NO3 = BZO + XC + XN';

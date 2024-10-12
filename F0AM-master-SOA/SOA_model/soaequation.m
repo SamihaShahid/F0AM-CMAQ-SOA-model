@@ -1,4 +1,5 @@
 function eqnerror = soaequation(nonvmol, n, cstar, semivol, mlwt, currentN)
+    %% Samiha Binte Shahid; email- sbint003@ucr.edu
     % Evaluates the function of total aerosol moles, N
     % Function evaluates to zero at equilibrium
     
